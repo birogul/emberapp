@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ember ready project</title>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http:////cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.1.2/handlebars.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ember.js/1.5.1/ember.min.js"></script>
+
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <h1>Welcome to our Ember.js blog</h1>
+  <script type="text/x-handlebars" id="articles/index">
+  <h2>Articles</h2>
+  {{#each}}
+    <p>{{#link-to 'articles.article' this}}{{title}}{{/link-to}}</p>
+  {{/each}}
+</script>
+<script type="text/x-handlebars" id="articles/article">
+  <h2>{{title}}</h2>
+  <p>{{body}}</p>
+</script>
+</body>
+</html>
